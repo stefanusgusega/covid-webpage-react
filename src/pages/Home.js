@@ -8,7 +8,6 @@ const {Content} = Layout;
 
 export class Home extends Component {
     render() {
-        
         return (
             <>
                 <MenuBar current='home'/>
@@ -16,7 +15,6 @@ export class Home extends Component {
                     "padding" : "25px 50px"
                 }}>
                     <div className="site-layout-content text-center">
-                        {/* Welcome to Stefanus COVID-19 Dashboard! */}
                         <FixedCarousel />
                     </div>
                 </Content>

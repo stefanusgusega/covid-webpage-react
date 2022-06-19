@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Data from './pages/Data';
 import { Layout } from 'antd';
+import { Codes } from './pages/Codes';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             </Route>
             <Route path='/about' element={
               <Layout>
-                <Home name='Stefanus'/>
+                <Codes />
               </Layout>}>
             </Route>
         </Routes>
