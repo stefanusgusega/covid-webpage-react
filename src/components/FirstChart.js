@@ -1,50 +1,10 @@
-import React, { Component } from 'react'
-import ReactEcharts from 'echarts-for-react'
+import Chart from './Chart'
 
-export class FirstChart extends Component {
-    constructor(props) {
-        super(props)
+export class FirstChart extends Chart {
+    generateChartOption() {
+        const { items } = this.state;
 
-        this.state = {
-            items: [],
-            isDataLoaded: false
-        }
-    }
-
-    componentDidMount() {
-        const api_url = 'http://localhost:4000/first'
-        // const api_url = `${process.env.API_HOST}:${process.env.API_PORT}`;
-        fetch(api_url)
-            .then((res) => res.json())
-            .then((json) => {
-                this.setState({
-                    items: json,
-                    isDataLoaded: true
-                })
-            })
-        
-        // console.log(this.state.isDataLoaded)
-
-    }
-    render() {
-        const { isDataLoaded, items } = this.state;
-
-        
-        if (!isDataLoaded) {
-            return (
-                <>
-                    <p>
-                        Fetching the data...
-                    </p>
-                </>
-            )
-        }
-
-        console.log(items.map((item) => {
-            return item['type'];
-        }).reverse())
-        
-        const option = {
+        return {
             grid: {
                 left: '3%',
                 right: '4%',
@@ -92,11 +52,10 @@ export class FirstChart extends Component {
                 color: ['#ff0000','#ff00ff'] // start and end colors for gradient 
             },
         }
-        return (
-        <>
-            <ReactEcharts option={option} />
-        </>
-        )
+    }
+
+    generateApiUrl() {
+        return 'http://localhost:4000/first'
     }
 }
 

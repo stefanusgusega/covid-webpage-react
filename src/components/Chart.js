@@ -2,26 +2,56 @@ import React, { Component } from 'react'
 import ReactEcharts from 'echarts-for-react'
 
 export class Chart extends Component {
-  render() {
-    const option = {
-        xAxis: {
-            type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: {
-            data: [120, 200, 150, 80, 70, 110, 130],
-            type: 'bar'
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            items: [],
+            isDataLoaded: false
         }
+
+        this.apiUrl = this.generateApiUrl()
     }
-    return (
-      <>
-        <ReactEcharts option={option} />
-      </>
-    )
-  }
+
+    generateApiUrl() {
+        throw new Error("Method 'generateApiUrl()' must be implemented.");
+    }
+
+    generateChartOption() {
+        throw new Error("Method 'generateChartOption' must be implemented.");
+    }
+
+    componentDidMount() {
+        fetch(this.apiUrl)
+            .then((res) => res.json())
+            .then((json) => {
+                this.setState({
+                    items: json,
+                    isDataLoaded: true
+                })
+            })
+
+    }
+    render() {
+        const { isDataLoaded } = this.state;
+
+        
+        if (!isDataLoaded) {
+            return (
+                <>
+                    <p>
+                        Fetching the data...
+                    </p>
+                </>
+            )
+        }
+    
+        return (
+        <>
+            <ReactEcharts option={this.generateChartOption()} />
+        </>
+        )
+    }
 }
 
 export default Chart
