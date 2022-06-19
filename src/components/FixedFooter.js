@@ -8,7 +8,10 @@ export class FixedFooter extends Component {
     return (
       <>
         <Footer className='text-center'>
-            Created by Stefanus Gusega Gunawan
+            <p>
+              Created by Stefanus Gusega Gunawan
+            </p>
+            <a href="https://www.flaticon.com/free-icons/virus" title="virus icons">Virus icons created by kosonicon - Flaticon</a>
         </Footer>
       </>
     )

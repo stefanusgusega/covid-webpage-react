@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,4 +40,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.virus-icon {
+  background: url("../public/coronavirus.png");
+  height: 20px;
+  width: 20px;
+  display: block;
+  /* Other styles here */
 }
