@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import FirstChart from '../components/FirstChart'
 import { FixedFooter } from '../components/FixedFooter'
 import MenuBar from '../components/MenuBar'
+import SecondChart from '../components/SecondChart'
 
 export class Data extends Component {
   render() {
@@ -12,7 +13,10 @@ export class Data extends Component {
         <Content style={{
             'padding' : '25px 50px'
         }}>
-            <FirstChart />
+            <div className='grid grid-cols-2 content-center'>
+                <FirstChart />
+                <SecondChart />
+            </div>
         </Content>
         <FixedFooter />
       </>

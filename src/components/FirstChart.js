@@ -7,7 +7,7 @@ export class FirstChart extends Chart {
         return {
             grid: {
                 left: '3%',
-                right: '4%',
+                right: '5%',
                 bottom: '8%',
                 containLabel: true
             },
@@ -18,7 +18,7 @@ export class FirstChart extends Chart {
                 }).reverse(),
                 name: 'Policy Type',
                 nameLocation: 'middle',
-                nameGap: 110,
+                nameGap: 97,
                 
             },
             xAxis: {
