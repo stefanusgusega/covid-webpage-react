@@ -49,3 +49,31 @@
   display: block;
   /* Other styles here */
 }
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+}
+
+.background-carousel-1 {
+  height: 320px;
+  /* line-height: 320px; */
+  position: relative;
+  text-align: center;
+  background-image: url("../public/carousel-1-alt.jpg");
+  background-size: cover;
+  background-position: top;
+  /* opacity: 0.3; */
+}
+
+.background-carousel-2 {
+  height: 320px;
+  /* line-height: 320px; */
+  position: relative;
+  text-align: center;
+  background-image: url("../public/carousel-2-alt.jpg");
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.3; */
+}
