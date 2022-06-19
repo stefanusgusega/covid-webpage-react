@@ -3,7 +3,6 @@ import { Layout, Menu } from 'antd';
 
 const {Header} = Layout; 
 
-// TODO : navigation to other page
 export class MenuBar extends Component {
   render() {
     const items = [
