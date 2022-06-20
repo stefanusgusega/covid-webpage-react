@@ -9,7 +9,7 @@ export class FixedCarousel extends Component {
             <div>
                 <div className='background-carousel-1'>
                     <div className='text-5xl font-extrabold text-black py-4'>
-                        Welcome to Stefanus COVID-19 Dashboard!
+                        Welcome to unofficial Korea COVID-19 Dashboard!
                     </div>
                     <div className="font-medium py-6 text-4xl">
                         Take a look at the data page to see data visualization about 

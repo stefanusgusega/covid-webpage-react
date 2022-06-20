@@ -12,7 +12,7 @@ function App() {
         <Routes>
             <Route path='/' element={
               <Layout>
-                <Home name='Stefanus'/>
+                <Home />
               </Layout>}>
             </Route>
             <Route path='/data' element={
